@@ -10,7 +10,7 @@
 - Web Technologies: HTML/CSS/JS
 - Webpage assignment
   - Jason Zhao: specify which page you're working on and link it here.
-  - Andrew Tran: [Profile Page] (/Users/andrewtran/Documents/twitterReplica/profilePage.html)
+  - Andrew Tran: [Profile Page](profilePage.html)
 - Functionality
   - Create a post (pictures and text)
   - Liking a post

@@ -10,9 +10,9 @@
 - Web Technologies: HTML/CSS/JS
 - Webpage assignment
   - Jason Zhao: specify which page you're working on and link it here.
-  - Andrew Tran:
+  - Andrew Tran: [Profile Page](profilePage.html)
 - Functionality
   - Create a post (pictures and text)
   - Liking a post
-  - Showing comments
+  - Showing / making comments
   - Scrollable feed on home page

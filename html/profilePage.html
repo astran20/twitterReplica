@@ -60,16 +60,199 @@
 
             <li class="linksLeft" class="selectedNav">
                 <img src="" alt="Profile Icon Selected">
-                <p class="navTextSelected" class="navText">Profile</p>
+                <p class="navText navTextSelected">Profile</p>
             </li>
 
             <li class="linksLeft">
                 <img src="" alt="More Icon">
                 <p class="navText">More</p>
             </li>
-
-            <p>hi</p>
         </ul>
+
+        <button id="postButton">Post</button>
+
+        <section id="account">
+            <img src="" alt="profilePicture">
+            <p class="username">[Username]</p>
+            <p class="subP">@[user]</p>
+            <img src="" alt="More Icon">
+        </section>
     </nav>
+
+    <main>
+        <header>
+            <img src="" alt="BackArrow Icon">
+            <h1>[Username]</h1>
+            <p class="subP">[#] posts</p>
+        </header>
+
+        <section id="mainProfile">
+            <img src="" alt="Background Banner">
+            <img src="" alt="Profile Picture" id="mainProfilePicture">
+
+            <section id="bio">
+                <section id="bioEdit">
+                    <button id="editProfileButton">Edit profile</button>
+                </section>
+                <section id="bioInfo">
+                    <p id="mainUsername">[Username]</p>
+                    <button id="verifyButton">
+                        <img src="" alt="Checkmark">
+                        Get verified
+                    </button>
+                    <p class="subP">@[user]</p>
+                    <img src="" alt="Calendar Icon">
+                    <p class="subP">Joined [Date]</p>
+                    <p class="subP"><p class="mainP">[#]</p> Following</p>
+                    <p class="subP"><p class="mainP">[#]</p> Followers</p>
+                </section>
+            </section>
+
+            <ul id="bioNav">
+                <li class="linksBio"><p id="Posts" class="linksBioText">Posts</p></li>
+                <li class="linksBio"><p id="Replies" class="linksBioText">Replies</p></li>
+                <li class="linksBio"><p id="Highlights" class="linksBioText">Highlights</p></li>
+                <li class="linksBio"><p id="Articles" class="linksBioText">Articles</p></li>
+                <li class="linksBio"><p id="Media" class="linksBioText">Media</p></li>
+                <li class="linksbio"><p id="Likes" class="linksBioText">Likes</p></li>
+            </ul>
+        </section>
+
+        <article class="feed">
+          <img src="" alt="profilePicture">
+          <p class="subP"><p class="mainP">[Username]</p> @[user] <p class="dot">.</p> [Date]</p>
+          <img src="" alt="More Icon">
+
+          <p class="mainP"> <!--text from api--></p>
+          <img src="" alt="PostImg"> <!--img from api-->
+          <ul id="postOptions">
+            <li class="postOptions">
+                <img src="" alt="Comment Icon">
+                <p class="subP">[#]</p>
+            </li>
+            <li class="postOptions">
+                <img src="" alt="Retweet Icon">
+                <p class="subP">[#]</p>
+            </li>
+            <li class="postOptions">
+                <img src="" alt="Likes Icon">
+                <p class="subP">[#]</p>
+            </li>
+            <li class="postOptions">
+                <img src="" alt="Views Icon">
+                <p class="subP">[#]</p>
+            </li>
+
+            <li>
+                <img src="" alt="Bookmark Icon">
+            </li>
+
+            <li>
+                <img src="" alt="Share Icon">
+            </li>
+          </ul>
+        </article>
+    </main>
+
+    <aside>
+        <input type="text" id="searchBox"> <img src="" alt="Search Icon"> <p id="search">Search</p>
+        
+        <section id="recommended">
+            <p class="subtitle">You might like</p>
+            <ul id="recommendedAccountsList">
+                <li class="recommendedAccounts">
+                    <img src="" alt="Profile Picture">
+                    <p class="mainP">[Username]</p>
+                    <p class="subP">@[user]</p>
+                    <button class="followButton">Follow</button>
+                </li>
+
+                <li class="recommendedAccounts">
+                    <img src="" alt="Profile Picture">
+                    <p class="mainP">[Username]</p>
+                    <p class="subP">@[user]</p>
+                    <button class="followButton">Follow</button>
+                </li>
+
+                <li class="recommendedAccounts">
+                    <img src="" alt="Profile Picture">
+                    <p class="mainP">[Username]</p>
+                    <p class="subP">@[user]</p>
+                    <button class="followButton">Follow</button>
+                </li>
+            </ul>
+            <a href=""><p class="showMore">Show more</p></a>
+        </section>
+
+        <section id="newsFeed">
+            <p class="subtitle">What's Happening</p>
+            <section id="event">
+                <img src="" alt="Event Picture">
+                <p class="mainP">[Event Name]</p>
+                <p class="subP">Events <p class="dot">.</p> <p class="hype">Live</p></p>
+                <p class="subP">Trending with <a href="">#[Trend]</a></p>
+            </section>
+            <ul id="recommendedNewsList">
+                <li class="recommendedNews">
+                    <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
+                    <p class="mainP">[TrendName]</p>
+                    <p class="subP">[#]k posts</p>
+                    <img src="" alt="More Icon">
+                </li>
+
+                <li class="recommendedNews">
+                    <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
+                    <p class="mainP">[TrendName]</p>
+                    <p class="subP">[#]k posts</p>
+                    <img src="" alt="More Icon">
+                </li>
+
+                <li class="recommendedNews">
+                    <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
+                    <p class="mainP">[TrendName]</p>
+                    <p class="subP">[#]k posts</p>
+                    <img src="" alt="More Icon">
+                </li>
+
+                <li class="recommendedNews">
+                    <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
+                    <p class="mainP">[TrendName]</p>
+                    <p class="subP">[#]k posts</p>
+                    <img src="" alt="More Icon">
+                </li>
+            </ul>
+            <a href=""><p class="showMore">Show More</p></a>
+        </section>
+
+        <footer>
+            <ul id="footerR1">
+                <li>            
+                    <a href=""><p class="subP">Terms of Service</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP">Privacy Policy</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP">Cookie Policy</p></a>
+                </li>
+            </ul>
+
+            <ul id="footerR2">
+                <li>
+                    <a href=""><p class="subP">Accessibility</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP">Ads Info</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP">More <p class="dot">...</p></p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP">© 2024 X Corp.</p></a>
+                </li>
+            </ul>
+
+        </footer>
+    </aside>
 </body>
 </html> 

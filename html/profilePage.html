@@ -8,63 +8,63 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <ul id="linksLeft">
             <li class="linksLeft">
-                <img src="" alt="X.com Logo">
+                <img src="../assets/XIcon.png" alt="X.com Logo" class="icons">
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Home Icon">
+                <img src="../assets/homeIcon.png" alt="Home Icon" class="icons">
                 <p class="navText">Home</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Explore Icon">
+                <img src="../assets/exploreIcon.png" alt="Explore Icon" class="icons">
                 <p class="navText">Explore</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Notifications Icon">
+                <img src="../assets/notificationIcon.png" alt="Notifications Icon" class="icons">
                 <p class="navText">Notifications</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Messages Icon">
+                <img src="../assets/messagesIcon.png" alt="Messages Icon" class="icons">
                 <p class="navText">Messages</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Grok Icon">
+                <img src="../assets/grokIcon.png" alt="Grok Icon" class="icons">
                 <p class="navText">Grok</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Bookmarks Icon">
+                <img src="../assets/bookmarksIcon.png" alt="Bookmarks Icon" class="icons">
                 <p class="navText">Bookmarks</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Communities Icon">
+                <img src="../assets/communitiesIcon.png" alt="Communities Icon" class="icons">
                 <p class="navText">Communities</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Premium Icon">
+                <img src="../assets/XIcon.png" alt="Premium Icon" class="icons">
                 <p class="navText">Premium</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="Verified Orgs Icon">
+                <img src="../assets/verifiedOrgsIcon.png" alt="Verified Orgs Icon" class="icons">
                 <p class="navText">Verified Orgs</p>
             </li>
 
             <li class="linksLeft" class="selectedNav">
-                <img src="" alt="Profile Icon Selected">
+                <img src="../assets/profileIcon.png" alt="Profile Icon Selected" class="icons">
                 <p class="navText navTextSelected">Profile</p>
             </li>
 
             <li class="linksLeft">
-                <img src="" alt="More Icon">
+                <img src="../assets/moreNavIcon.png" alt="More Icon" class="icons">
                 <p class="navText">More</p>
             </li>
         </ul>
@@ -72,18 +72,23 @@
         <button id="postButton">Post</button>
 
         <section id="account">
-            <img src="" alt="profilePicture">
-            <p class="username">[Username]</p>
-            <p class="subP">@[user]</p>
-            <img src="" alt="More Icon">
+            <img src="" alt="Profile Picture">
+            <section>
+                <p class="mainP">[Username]</p>
+                <p class="subP">@[user]</p>
+            </section>
+            <img src="../assets/moreIcon.png" alt="More Icon" class="icons">
         </section>
     </nav>
 
     <main>
         <header>
-            <img src="" alt="BackArrow Icon">
-            <h1>[Username]</h1>
-            <p class="subP">[#] posts</p>
+            <img src="../assets/backArrowIcon.png" alt="BackArrow Icon" class="icons">
+            <section>   
+                <h1 id="username">[Username]</h1>
+                <p class="subP">[#] posts</p>
+            </section>
+            
         </header>
 
         <section id="mainProfile">
@@ -97,11 +102,11 @@
                 <section id="bioInfo">
                     <p id="mainUsername">[Username]</p>
                     <button id="verifyButton">
-                        <img src="" alt="Checkmark">
+                        <img src="../assets/verifiedIcon.png" alt="Checkmark" class="textIcon">
                         Get verified
                     </button>
                     <p class="subP">@[user]</p>
-                    <img src="" alt="Calendar Icon">
+                    <img src="../assets/calendarIcon.png" alt="Calendar Icon" class="textIcon">
                     <p class="subP">Joined [Date]</p>
                     <p class="subP"><p class="mainP">[#]</p> Following</p>
                     <p class="subP"><p class="mainP">[#]</p> Followers</p>
@@ -121,41 +126,41 @@
         <article class="feed">
           <img src="" alt="profilePicture">
           <p class="subP"><p class="mainP">[Username]</p> @[user] <p class="dot">.</p> [Date]</p>
-          <img src="" alt="More Icon">
+          <img src="../assets/moreIcon.png" alt="More Icon" class="icons">
 
           <p class="mainP"> <!--text from api--></p>
           <img src="" alt="PostImg"> <!--img from api-->
           <ul id="postOptions">
             <li class="postOptions">
-                <img src="" alt="Comment Icon">
+                <img src="../assets/commentsIcon.png" alt="Comment Icon" class="textIcon">
                 <p class="subP">[#]</p>
             </li>
             <li class="postOptions">
-                <img src="" alt="Retweet Icon">
+                <img src="../assets/repostIcon.png" alt="Repost Icon" class="textIcon">
                 <p class="subP">[#]</p>
             </li>
             <li class="postOptions">
-                <img src="" alt="Likes Icon">
+                <img src="../assets/likeIcon.png" alt="Likes Icon" class="textIcon">
                 <p class="subP">[#]</p>
             </li>
             <li class="postOptions">
-                <img src="" alt="Views Icon">
+                <img src="../assets/viewsIcon.png" alt="Views Icon" class="textIcon">
                 <p class="subP">[#]</p>
             </li>
 
             <li>
-                <img src="" alt="Bookmark Icon">
+                <img src="../assets/bookmarkIcon.png" alt="Bookmark Icon" class="textIcon">
             </li>
 
             <li>
-                <img src="" alt="Share Icon">
+                <img src="../assets/shareIcon.png" alt="Share Icon" class="textIcon">
             </li>
           </ul>
         </article>
     </main>
 
     <aside>
-        <input type="text" id="searchBox"> <img src="" alt="Search Icon"> <p id="search">Search</p>
+        <input type="text" id="searchBox"> <img src="../assets/searchIcon.png" alt="Search Icon" class="textIcon"> <p id="search">Search</p>
         
         <section id="recommended">
             <p class="subtitle">You might like</p>
@@ -197,28 +202,28 @@
                     <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
                     <p class="mainP">[TrendName]</p>
                     <p class="subP">[#]k posts</p>
-                    <img src="" alt="More Icon">
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
                 </li>
 
                 <li class="recommendedNews">
                     <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
                     <p class="mainP">[TrendName]</p>
                     <p class="subP">[#]k posts</p>
-                    <img src="" alt="More Icon">
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
                 </li>
 
                 <li class="recommendedNews">
                     <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
                     <p class="mainP">[TrendName]</p>
                     <p class="subP">[#]k posts</p>
-                    <img src="" alt="More Icon">
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
                 </li>
 
                 <li class="recommendedNews">
                     <p class="subP">[Topic] <p class="dot">.</p> Trending</p>
                     <p class="mainP">[TrendName]</p>
                     <p class="subP">[#]k posts</p>
-                    <img src="" alt="More Icon">
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
                 </li>
             </ul>
             <a href=""><p class="showMore">Show More</p></a>

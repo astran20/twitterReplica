@@ -1,0 +1,109 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+
+.subP{
+    color: darkgray;
+}
+
+.icons{
+    height: 30px;
+    width: 30px;
+}
+
+.linksLeft{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#linksLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navText{
+    font-size: 20px;
+}
+
+.textIcon{
+    height: 15px;
+    width: 15px;
+}
+
+#postButton{
+    background-color: rgb(74,153,233);
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left:  40px;
+    border-radius: 30%;
+    color: white;
+    font-size: 15px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+nav ul{
+    margin-bottom: 0;
+}
+
+#account{
+
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#account section p{
+    margin: 0;
+}
+
+#account section{
+    margin-right: 50px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px darkgray solid;
+    border-right: 1px darkgray solid;
+    width: 40vw;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    width: 40vw;
+    gap: 25px;
+    padding: 2px 2px 2px 0;
+}
+
+header section p, h1{
+    margin: 0;
+}
+
+h1{
+    font-size: 20px;
+}
+
+#mainProfile{
+    display: flex;
+    flex-direction: column;
+}

@@ -4,11 +4,14 @@ body{
     display: flex;
     justify-content: space-around;
     font-size: 15px;
+    --blue: rgb(74,153,233);
+    --gray: rgb(100,100,100);
+    --lightGray: rgb(169,169,169);
 }
 
 
 .subP{
-    color: darkgray;
+    color: var(--gray);
 }
 
 .icons{
@@ -39,7 +42,7 @@ body{
 }
 
 #postButton{
-    background-color: rgb(74,153,233);
+    background-color: var(--blue);
     width: 200px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -81,18 +84,21 @@ nav ul{
 main{
     display: flex;
     flex-direction: column;
-    border-left: 1px darkgray solid;
-    border-right: 1px darkgray solid;
+    border-left: 1px var(--gray) solid;
+    border-right: 1px var(--gray) solid;
     width: 40vw;
 }
 
 header{
     display: flex;
     flex-direction: row;
-    background-color: red;
-    width: 40vw;
+    background-color: black;
+    width: 39.vw;
     gap: 25px;
     padding: 2px 2px 2px 0;
+    position: sticky;
+    top: 0%;
+    
 }
 
 header section p, h1{
@@ -106,4 +112,224 @@ h1{
 #mainProfile{
     display: flex;
     flex-direction: column;
+    height: 50vh;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#bio{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 15px;
+}
+
+#editProfileButton{
+    position: relative end;
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+    border-radius: 40%;
+    padding: 10px;
+    width: fit-content;
+    align-self: end;
+    margin-right: 15px;
+}
+
+#bioText{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 15px;
+}
+
+.profile p{
+    margin: 0;
+}
+
+#verifyButton{
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 15px;
+    border-radius: 40%;
+}
+
+#mainUsername{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#joinDate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#joinDate img, #joinDate p{
+    margin: 0;
+}
+
+#followerInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+#following, #followers{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#following p, #followers p{
+    margin: 0;
+}
+
+#bioNav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px var(--gray) solid;
+    margin: 0;
+}
+
+.linksBioTextUnselected{
+    color: var(--gray);
+}
+
+.linksBioTextSelected{
+    border-bottom: 3px var(--blue) solid;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+article{
+    border-bottom: 1px var(--gray) solid;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+article section{
+    max-width: 80%;
+
+}
+article img{
+    margin: 15px;
+    width: 5vw;
+}
+
+.postData{
+    display: flex;
+    flex-direction: column;
+}
+
+.postMetaData{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.postMetaData img{
+    position: relative end;
+    align-self: end;
+}
+
+#postOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 36vw;
+    margin: 0;
+    padding: 0;
+}
+
+.postOptions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dot{
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 15px;
+    width: 30vw;
+    margin-right: 15vw;
+    margin-left: 2vw;
+}
+
+#searchBox{
+    background-color: var(--gray);
+    padding: 10px;
+    padding-left: 25px;
+    border-radius: 40%;
+}
+
+#searchBox::placeholder{
+    color: var(--lightGray);
+}
+
+#recommended{
+    border: 1px var(--gray) solid;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#recommendedAccounts{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.recommendedAccounts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.recommendedAccounts p, .recommendedAccounts img{
+    padding: 0;
+    margin: 0;
+}
+
+.showMore{
+    color: var(--blue);
+    text-decoration-color: var(--blue);
+    margin-left: 15px;
+}
+
+#newsFeed{
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--gray) solid;
+    border-radius: 10%;
 }

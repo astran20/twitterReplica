@@ -305,21 +305,21 @@ aside{
 #recommendedAccounts{
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin-left: 15px;
     padding: 0;
+    gap: 15px;
 }
 
 .recommendedAccounts{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 5px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
 }
 
-.recommendedAccounts p, .recommendedAccounts img{
-    padding: 0;
-    margin: 0;
-}
 
 .showMore{
     color: var(--blue);
@@ -332,4 +332,56 @@ aside{
     flex-direction: column;
     border: 1px var(--gray) solid;
     border-radius: 10%;
+}
+
+#event{
+    display: flex;
+    flex-direction: row;
+}
+
+#event section{
+    display: flex;
+    flex-direction: column;
+}
+
+#event section p{
+    margin: 0;
+    padding: 0;
+}
+
+#event img{
+    margin: 15px;
+}
+#event section section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recommendedNews, .recommendedNews section{
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+#footerR1, #footerR2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 10px;
+}
+
+#footerR1 li, #footerR2 li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

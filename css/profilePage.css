@@ -6,6 +6,7 @@ body{
     font-size: 15px;
     --blue: rgb(74,153,233);
     --gray: rgb(100,100,100);
+    --darkGray: rgb(33,33,33);
     --lightGray: rgb(169,169,169);
 }
 
@@ -195,6 +196,12 @@ h1{
     margin: 0;
 }
 
+.followButton{
+    border-radius: 20rem;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
 #bioNav{
     display: flex;
     flex-direction: row;
@@ -282,14 +289,28 @@ aside{
 }
 
 #searchBox{
-    background-color: var(--gray);
+    background-color: var(--darkGray);
     padding: 10px;
     padding-left: 25px;
     border-radius: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-#searchBox::placeholder{
+#searchBoxInput::placeholder{
     color: var(--lightGray);
+}
+
+#searchBoxInput{
+    background-color: var(--darkGray);
+    border: none;
+}
+
+#searchIcon{
+    width: 30px;
+    height: 30px;
+    margin: 0;
 }
 
 #recommended{
@@ -399,6 +420,6 @@ footer{
     flex-direction: row;
 }
 
-footer a{
+a{
     text-decoration: none;
 }

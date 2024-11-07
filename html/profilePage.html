@@ -72,7 +72,7 @@
         <button id="postButton">Post</button>
 
         <section id="account">
-            <img src="" alt="Profile Picture">
+            <img src="../assets/catgirl-pfp.jpg" alt="Profile Picture" class="icons" id="profilePicture">
             <section>
                 <p class="mainP">[Username]</p>
                 <p class="subP">@[user]</p>
@@ -92,8 +92,8 @@
         </header>
 
         <section id="mainProfile">
-            <img src="" alt="Background Banner">
-            <img src="" alt="Profile Picture" id="mainProfilePicture">
+            <img src="../assets/catgirl-pfp.jpg" alt="Background Banner" id="banner">
+            <img src="../assets/catgirl-pfp.jpg" alt="Profile Picture" id="mainProfilePicture">
                 <button id="editProfileButton">Edit profile</button>
             <section id="bio">
                 <section id="bioText">
@@ -103,7 +103,7 @@
                     </section>
                     
                     <button id="verifyButton">
-                    <img src="../assets/verifiedIcon.png" alt="Checkmark" class="textIcon">
+                    <img src="../assets/verifiedIcon.png" alt="Checkmark" class="textIcon" id="blueCheck">
                     Get verified
                     </button>
                     
@@ -137,15 +137,17 @@
         </section>
 
         <article class="feed">
-          <img src="" alt="profilePicture" class="icons">
+          <img src="../assets/catgirl-pfp.jpg" alt="profilePicture" class="icons" id="profilePicture">
           <section>
             <section class="postData">
                 <section class="postMetaData">
-                    <p class="mainP">[Username]</p>
-                    <p class="subP"> @[user] </p>
-                    <p class="dot">.</p> 
-                    <p class="subP">[Date]</p>
-                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
+                    <div>
+                        <p class="mainP">[Username]</p>
+                        <p class="subP"> @[user] </p>
+                        <p class="dot">.</p> 
+                        <p class="subP">[Date]</p>
+                    </div>
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons postMore">
                 </section>
 
                 <p class="mainP"> <!--text from api--></p>
@@ -154,28 +156,28 @@
             
             <ul id="postOptions">
                 <li class="postOptions">
-                    <img src="../assets/commentsIcon.png" alt="Comment Icon" class="textIcon">
+                    <img src="../assets/commentsIcon.png" alt="Comment Icon" class="textIcon postIcon">
                     <p class="subP">[#]</p>
                 </li>
                 <li class="postOptions">
-                    <img src="../assets/repostIcon.png" alt="Repost Icon" class="textIcon">
+                    <img src="../assets/repostIcon.png" alt="Repost Icon" class="textIcon postIcon">
                     <p class="subP">[#]</p>
                 </li>
                 <li class="postOptions">
-                    <img src="../assets/likeIcon.png" alt="Likes Icon" class="textIcon">
+                    <img src="../assets/likeIcon.png" alt="Likes Icon" class="textIcon postIcon">
                     <p class="subP">[#]</p>
                 </li>
                 <li class="postOptions">
-                    <img src="../assets/viewsIcon.png" alt="Views Icon" class="textIcon">
+                    <img src="../assets/viewsIcon.png" alt="Views Icon" class="textIcon postIcon">
                     <p class="subP">[#]</p>
                 </li>
 
                 <li class="postOptions">
-                    <img src="../assets/bookmarkIcon.png" alt="Bookmark Icon" class="textIcon">
+                    <img src="../assets/bookmarkIcon.png" alt="Bookmark Icon" class="textIcon postIcon">
                 </li>
 
                 <li class="postOptions">
-                    <img src="../assets/shareIcon.png" alt="Share Icon" class="textIcon">
+                    <img src="../assets/shareIcon.png" alt="Share Icon" class="textIcon postIcon">
                 </li>
             </ul>
             </section>
@@ -224,7 +226,7 @@
         </section>
 
         <section id="newsFeed">
-            <p class="subtitle">What's Happening</p>
+            <p class="subtitle">What's happening</p>
             <section id="event">
                 <img src="" alt="Event Picture">
                 <section>

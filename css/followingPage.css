@@ -7,15 +7,15 @@ html, body {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    --sky-blue: #9BB8ED;
-    --periwinkle: #A39FE1;
-    --lilac: #DEB3E0;
-    --pink: #FEC6DF;
+    font-size: calc(0.4vh);
+    --buttonColor: #9BB8ED;
+    --background1: #A39FE1;
+    --background2: #DEB3E0;
+    --background3: #FEC6DF;
     --light-pink: #FFDDE4;
-    --cream: #FEECD6;
-    --soft-grey: #F5F5F7;
+    --text2: #FEECD6;
+    --border: #F5F5F7;
 }
-
 
 body {
     display: grid;
@@ -29,7 +29,7 @@ nav {
     display: grid;
     grid-template-rows: 3% 77% 10% 10%;
     grid-template-columns: 1fr;
-    background-color: var(--pink);
+    background-color: var(--background3);
 }
 
 #twitter-logo {
@@ -41,27 +41,27 @@ nav {
 #functionality-links {
     font-size: 7rem;
     list-style: none;
-    background-color: var(--pink);
+    background-color: var(--background3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 5rem;
 }
 
 #functionality-links li a {
     text-decoration: none;
-    color: var(--periwinkle);
+    color: var(--background1);
 }
 
 #post-button {
     width: 80%;
     height: 70%;
-    background-color: var(--sky-blue);
-    border: 2px solid var(--sky-blue);
+    background-color: var(--buttonColor);
+    border: 2px solid var(--buttonColor);
     border-radius: 10rem;
     margin: 0 auto;
     font-size: 10rem;
-    color: var(--cream);
+    color: var(--text2);
 }
 
 #profile-pic-container {
@@ -81,18 +81,18 @@ nav {
 #profile-link {
     font-size: 10rem;
     text-decoration: none;
-    color: var(--cream);
+    color: var(--text2);
 }
 
 main {
     grid-column: 3/4;
-    background-color: var(--lilac);
+    background-color: var(--background2);
     display: grid;
     grid-auto-rows: min-content;
     grid-template-columns: 1fr;
     position: relative;
 
-    border: 0.5rem solid var(--soft-grey);
+    border: 0.5rem solid var(--border);
 }
 
 header {
@@ -104,32 +104,33 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 0.5rem solid var(--soft-grey);
+    border-bottom: 0.5rem solid var(--border);
 }
 
 header button {
     height: 100%;
     width: 50%;
-    background-color: var(--lilac);
-    border: 2px solid var(--lilac);
+    background-color: var(--background2);
+    border: 2px solid var(--background2);
     font-size: 10rem;
-    color: var(--soft-grey);
+    color: var(--border);
 }
 
 #post-compose {
+    background-color: var(--background2);
     display: flex;
     flex-direction: row;
     gap: 5rem;
     padding: 5rem 5rem;
     align-items: center;
-border-bottom: 0.5rem solid var(--soft-grey);
+    border-bottom: 0.5rem solid var(--border);
 }
 
 #compose-input {
-    width: 100rem;
+    width: 170rem;
     height: 30rem;
     font-size: 10rem;
-    background-color: var(--lilac);
+    background-color: var(--background2);
     border: none;
     outline: none;
 }
@@ -139,15 +140,15 @@ border-bottom: 0.5rem solid var(--soft-grey);
     width: 35rem;
     height: 15rem;
     border-radius: 10rem;
-    background-color: var(--sky-blue); 
+    background-color: var(--buttonColor); 
     border: none;
     font-size: 10rem;
-    color: var(--soft-grey);
+    color: var(--border);
 }
 
 aside {
     grid-column: 4/5;
-    background-color: var(--pink);
+    background-color: var(--background3);
     display: grid;
     grid-template-rows: 7% 58% 35%;
     grid-template-columns: 1fr;
@@ -155,43 +156,46 @@ aside {
     padding: 3rem 3rem;
 }   
 
+.sidebar-icons {
+    width: 10rem;
+    height: 10rem;
+}
+
 #search-input {
     height: 10rem;
     width: 60rem;
     border-radius: 10rem;
-    border: 0.5rem solid var(--soft-grey);
+    border: 0.5rem solid var(--border);
     font-size: 10rem;
     padding: 5rem 5rem;
-    border: 0.5rem solid var(--soft-grey);
+    border: 0.5rem solid var(--border);
 }
 
 #explore {
     border-radius: 10rem;
-    background-color: var(--pink);
+    background-color: var(--background3);
     height: 100%;
     width: 100%;
-    border: 0.5rem solid var(--soft-grey);
+    border: 0.5rem solid var(--border);
     padding: 3rem 3rem;
 }
 
 #explore h2 {
     font-size: 5rem;
-    color: var(--periwinkle);
+    color: var(--background1);
 }
 
 #who-to-follow {
     border-radius: 10rem;
-    background-color: var(--pink);
+    background-color: var(--background3);
     margin-top: 10%;
     height: 90%;
     width: 100%;
-    border: 0.5rem solid var(--soft-grey);
+    border: 0.5rem solid var(--border);
     padding: 3rem 3rem;
 }
 
 #who-to-follow h2 {
     font-size: 5rem;
-    color: var(--periwinkle);
+    color: var(--background1);
 }
-
-

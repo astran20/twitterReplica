@@ -11,6 +11,9 @@ body{
     font-family: sans-serif;
 }
 
+.showMore{
+    color: var(--blue);
+}
 
 .subP{
     color: var(--gray);
@@ -145,6 +148,8 @@ h1{
 #banner{
     height: 25vh;
     margin-top: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 #bio{
@@ -176,6 +181,20 @@ h1{
 
 .profile p{
     margin: 0;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.mainProfile p{
+    margin: 0;
+}
+.username{
+    font-weight: bold;
 }
 
 #verifyButton{
@@ -404,30 +423,46 @@ aside{
     border-radius: 10%;
 }
 
+#eventPicture{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+}
+
 #event{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: auto;
 }
 
-#event section{
+.trendName{
+    font-weight: bold;
+}
+
+#eventInfoLive{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+#event > section{
     display: flex;
     flex-direction: column;
 }
 
-#event section p{
-    margin: 0;
-    padding: 0;
+#event p:not(.dot){
+    margin: 0px;
+    margin-bottom: 5px;
 }
 
 #event img{
     margin: 15px;
 }
-#event section section{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
+
+
+
 
 .recommendedNews, .recommendedNews section{
     display: flex;

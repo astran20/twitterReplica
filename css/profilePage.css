@@ -356,6 +356,23 @@ article section{
     margin: 0;
 
 }
+
+.postButton{
+    padding: 0px;
+    background-color: black;
+    border-radius: 100%;
+    border: 0;
+}
+
+.postButton:hover{
+    border: 1px var(--blue) solid;
+    padding: 1px;
+}
+
+.commentIcon{
+    padding: 0px;
+}
+
 .dot{
     margin-top: 0;
     margin-bottom: 5px;
@@ -371,9 +388,9 @@ aside{
     width: 35vw;
     margin-right: 10vw;
     margin-left: 2vw;
-    /* position: sticky; Why this no work*/ 
-    top: 0%;
-    max-height: 120vh;
+    position: sticky;
+    top: -40%;
+    max-height: fit-content;
 }
 
 #searchBox{
@@ -384,6 +401,13 @@ aside{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+aside > div{
+    background-color: black;
+    position: sticky;
+    top: 0%;
+    padding-bottom: 10px;
 }
 
 #searchBoxInput::placeholder{
@@ -611,3 +635,4 @@ footer{
 a{
     text-decoration: none;
 }
+

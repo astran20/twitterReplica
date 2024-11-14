@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="../css/profilePage.css">
+    <script src="../javascript/profilePage.js"></script>
 </head>
 <body>
     <nav>
@@ -156,7 +157,7 @@
             
             <ul id="postOptions">
                 <li class="postOptions">
-                    <img src="../assets/commentsIcon.png" alt="Comment Icon" class="textIcon postIcon">
+                    <button class="postButton commentIcon" onclick="createComment()"><img src="../assets/commentsIcon.png" alt="Comment Icon" class="textIcon postIcon"></button>
                     <p class="subP">39</p>
                 </li>
                 <li class="postOptions">
@@ -323,11 +324,12 @@
     </main>
 
     <aside>
+        <div>
         <section id="searchBox">
             <img src="../assets/searchIcon.png" alt="Search Icon" class="textIcon" id="searchIcon">
             <input type="text" placeholder="Search" id="searchBoxInput"> 
         </section>
-        
+        </div>
         
         <section id="recommended">
             <p class="subtitle">You might like</p>

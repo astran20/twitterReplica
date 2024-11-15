@@ -11,6 +11,8 @@ body{
     font-family: sans-serif;
 }
 
+
+
 .showMore{
     color: var(--blue);
 }
@@ -69,6 +71,8 @@ nav{
     top: 0%;
     height: 1vh;
 }
+
+
 
 nav ul{
     margin-bottom: 0;
@@ -356,6 +360,21 @@ article section{
     margin: 0;
 
 }
+
+.postButton{
+    padding: 0px;
+    background-color: black;
+    border-radius: 100%;
+    border: 0;
+}
+
+.postButton:hover{
+    border: 1px var(--blue) solid;
+    padding: 1px;
+}
+
+
+
 .dot{
     margin-top: 0;
     margin-bottom: 5px;
@@ -371,9 +390,9 @@ aside{
     width: 35vw;
     margin-right: 10vw;
     margin-left: 2vw;
-    /* position: sticky; Why this no work*/ 
-    top: 0%;
-    max-height: 120vh;
+    position: sticky;
+    top: -40%;
+    max-height: fit-content;
 }
 
 #searchBox{
@@ -384,6 +403,13 @@ aside{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+aside > div{
+    background-color: black;
+    position: sticky;
+    top: 0%;
+    padding-bottom: 10px;
 }
 
 #searchBoxInput::placeholder{
@@ -610,4 +636,41 @@ footer{
 
 a{
     text-decoration: none;
+}
+
+#commentPopup{
+    background-color: black;
+    opacity: 0;
+    position: fixed;
+    top: 5vh;
+    width: 45vw;
+    border-radius: 5%;
+    z-index: -1;
+}
+
+#commentPopup.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+.createCommentHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 30px 20px;
+}
+
+#commentPopupBackground{
+    background-color: var(--lightGray);
+    opacity: 0;
+    position: fixed;
+    height: 1000vh;
+    width: 1000vw;
+    z-index: -1;
+    top: 0;
+}
+
+#commentPopupBackground.opaque{
+    opacity: 40%;
+    z-index: 998;
 }

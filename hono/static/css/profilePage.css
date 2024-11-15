@@ -1,0 +1,676 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    --blue: rgb(74,153,233);
+    --gray: rgb(100,100,100);
+    --darkGray: rgb(33,33,33);
+    --lightGray: rgb(169,169,169);
+    font-family: sans-serif;
+}
+
+
+
+.showMore{
+    color: var(--blue);
+}
+
+.subP{
+    color: var(--gray);
+}
+
+.icons{
+    height: 30px;
+    width: 30px;
+}
+
+.linksLeft{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#linksLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navText{
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.textIcon{
+    height: 20px;
+    width: 20px;
+}
+
+#postButton{
+    background-color: var(--blue);
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left:  40px;
+    border-radius: 30rem;
+    color: white;
+    font-size: 15px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    margin-left: 5vw;
+    margin-right: 2vw;
+    position: sticky;
+    top: 0%;
+    height: 1vh;
+}
+
+
+
+nav ul{
+    margin-bottom: 0;
+}
+
+.profilePicture{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 10px;
+}
+
+article .profilePicture{
+    margin: 10px 10px;
+}
+
+#account{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+#account section p{
+    margin: 0;
+}
+
+#account section{
+    margin-right: 50px;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px var(--gray) solid;
+    border-right: 1px var(--gray) solid;
+    width: 40vw;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    width: 39.85vw;
+    border-right: 1px solid var(--gray);
+    gap: 25px;
+    padding: 2px 2px 2px 0;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+
+header img{
+    padding-left: 20px;
+}
+
+header section p, h1{
+    margin: 0;
+}
+
+h1{
+    font-size: 20px;
+}
+
+#mainProfile{
+    display: flex;
+    flex-direction: column;
+    max-height: auto;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+#mainProfilePicture{
+    border-radius: 100%;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid black;
+    margin-left: 10px;
+    position: absolute;
+    top: 25vh;
+}
+
+#banner{
+    height: 26vh;
+    margin-top: 10px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#bio{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 15px;
+}
+
+#editProfileButton{
+    position: relative end;
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+    border-radius: 40rem;
+    padding: 10px;
+    width: fit-content;
+    align-self: end;
+    margin-right: 15px;
+}
+
+#bioText{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 15px;
+}
+
+.profile p{
+    margin: 0;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.mainProfile p{
+    margin: 0;
+}
+.username{
+    font-weight: bold;
+}
+
+#verifyButton{
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 15px;
+    border-radius: 40rem;
+}
+
+#blueCheck{
+    width: 15px;
+    height: 15px;
+}
+#mainUsername{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#joinDate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+#joinDate img, #joinDate p{
+    margin: 0;
+}
+
+#followerInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+#following, #followers{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#following p, #followers p{
+    margin: 0;
+}
+
+.followButton{
+    border-radius: 20rem;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+#bioNav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px var(--gray) solid;
+    margin: 0;
+}
+
+.linksBioTextUnselected{
+    color: var(--gray);
+}
+
+.linksBioTextSelected{
+    border-bottom: 3px var(--blue) solid;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+article{
+    border-bottom: 1px var(--gray) solid;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    max-width: 40vw;
+}
+
+article section{
+    max-width: 40vw;
+}
+
+
+.postText{
+    margin: 0;
+}
+
+.postImg{
+    margin: 0;
+    margin-top: 5px;
+    width: 30vw;
+    border-radius: 10%;
+    height: 30vh;
+}
+
+.postData{
+    display: flex;
+    flex-direction: column;
+    width: 34vw;
+}
+
+.postMetaData{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.postMetaData div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.postMetaData img{
+    justify-self: end;
+    align-self: end;
+    margin: 0;
+}
+
+#postOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 38.85vw;
+    margin: 0;
+    padding: 0;
+}
+
+.postOptions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+}
+
+.postOptions .subP{
+    margin-left: 10px;
+}
+.postIcon{
+    margin: 0;
+
+}
+
+.postButton{
+    padding: 0px;
+    background-color: black;
+    border-radius: 100%;
+    border: 0;
+}
+
+.postButton:hover{
+    border: 1px var(--blue) solid;
+    padding: 1px;
+}
+
+
+
+.dot{
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--gray);
+    font-size: 15px;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 15px;
+    width: 35vw;
+    margin-right: 10vw;
+    margin-left: 2vw;
+    position: sticky;
+    top: -40%;
+    max-height: fit-content;
+}
+
+#searchBox{
+    background-color: var(--darkGray);
+    padding: 10px;
+    padding-left: 25px;
+    border-radius: 10rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+aside > div{
+    background-color: black;
+    position: sticky;
+    top: 0%;
+    padding-bottom: 10px;
+}
+
+#searchBoxInput::placeholder{
+    color: var(--lightGray);
+}
+
+#searchBoxInput{
+    background-color: var(--darkGray);
+    border: none;
+    color: var(--lightGray);
+    height: 30px;
+    width: 275px;
+}
+
+#searchIcon{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+#recommended{
+    border: 1px var(--gray) solid;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0px 0px 15px;
+}
+
+#recommendedAccounts{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding: 0;
+    gap: 15px;
+}
+
+.recommendedAccounts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+}
+
+
+.showMore{
+    color: var(--blue);
+    text-decoration-color: var(--blue);
+    margin-left: 15px;
+}
+
+#newsFeed{
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--gray) solid;
+    border-radius: 10%;
+}
+
+
+#eventPicture{
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin-left: 30px;
+}
+
+#event{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: auto;
+}
+
+
+.trendName{
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 5px;
+}
+
+.trendWith{
+    color: white !important;
+    text-decoration: none;
+}
+
+.trend{
+    color: var(--blue);
+}
+
+#eventInfoLive{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    width: 250px;
+}
+
+#event > section{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+#event > section > p{
+    margin: 0px;
+}
+
+.event{
+    text-decoration: none;
+    color: var(--gray);
+}
+
+#eventInfoLive p:not(.dot){
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+#eventInfoLive .dot{
+    padding-bottom: 5px;
+}
+
+#event img{
+    margin: 15px;
+}
+
+
+.hype{
+    color: white;
+    background-color: rgb(211,72,126);
+    padding: 5px 10px 5px 10px;
+    border-radius: 10%;
+}
+
+.recommendedNews{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 25px;
+}
+
+#recommendedNewsList{
+    margin: 0;
+}
+
+#recommendedNewsList li{
+    margin-bottom: 10px;
+}
+
+.recommendedNews > section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+}
+
+.recommendedNews > section > p{
+    margin: 0;
+}
+
+#recommendedNewsList{
+    padding-left: 25px;
+}
+
+.topic{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.topic p{
+    margin-bottom: 0;
+}
+
+.topic .dot{
+    margin-top: 7px;
+}
+
+#newsFeed > p, #recommended > p{
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+#footerR1, #footerR2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 10px;
+}
+
+#footerR1 li, #footerR2 li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerText{
+    margin: 1px;
+    text-wrap: nowrap;
+}
+
+.footerMore{
+    display: flex;
+    flex-direction: row;
+}
+
+a{
+    text-decoration: none;
+}
+
+#commentPopup{
+    background-color: black;
+    opacity: 0;
+    position: fixed;
+    top: 5vh;
+    width: 45vw;
+    border-radius: 5%;
+    z-index: -1;
+}
+
+#commentPopup.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+.createCommentHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 30px 20px;
+}
+
+#commentPopupBackground{
+    background-color: var(--lightGray);
+    opacity: 0;
+    position: fixed;
+    height: 1000vh;
+    width: 1000vw;
+    z-index: -1;
+    top: 0;
+}
+
+#commentPopupBackground.opaque{
+    opacity: 40%;
+    z-index: 998;
+}

@@ -49,7 +49,7 @@ body{
     width: 20px;
 }
 
-#postButton{
+#postBtn{
     background-color: var(--blue);
     width: 200px;
     padding-top: 10px;
@@ -368,13 +368,6 @@ article section{
     border: 0;
 }
 
-.postButton:hover{
-    border: 1px var(--blue) solid;
-    padding: 1px;
-}
-
-
-
 .dot{
     margin-top: 0;
     margin-bottom: 5px;
@@ -657,7 +650,21 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px 30px 20px;
+    padding: 20px 20px 10px 20px;
+}
+
+.closeCreateCommentButton{
+    color: white;
+    background-color: black;
+    border: 0;
+    height: 1em;
+    font-size: 15px;
+}
+
+.draftComment{
+    margin: 0;
+    color: var(--blue);
+    font-weight: bold;
 }
 
 #commentPopupBackground{
@@ -673,4 +680,43 @@ a{
 #commentPopupBackground.opaque{
     opacity: 40%;
     z-index: 998;
+}
+
+.originalPost{
+    margin-top: 0px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.originalPostMetaData{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    margin-top: 1px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.originalPostMetaData li{
+    list-style: none;
+}
+
+.originalPostMetaData .dot{
+    font-size: 25px;
+    padding-bottom: 8px;
+}
+
+.originalPostData{
+    margin-left: 20px;
+    padding: 0px;
+}
+
+.originalPost div{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
 }

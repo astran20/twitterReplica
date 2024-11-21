@@ -15,8 +15,11 @@
             </li>
 
             <li class="linksLeft">
-                <img src="../assets/homeIcon.png" alt="Home Icon" class="icons">
-                <p class="navText">Home</p>
+                <a href="../html/followingPage.html" class="linksLeft">
+                    <img src="../assets/homeIcon.png" alt="Home Icon" class="icons">
+                     <p class="navText">Home</p>
+                </a>
+                
             </li>
 
             <li class="linksLeft">
@@ -87,7 +90,11 @@
             <img src="../assets/backArrowIcon.png" alt="BackArrow Icon" class="icons">
             <section>   
                 <h1>SweetieBot</h1>
-                <p class="subP">4 posts</p>
+                <section id="numPosts">
+                    <p class="subP numPosts">#</p>
+                    <p class="subP"> posts</p>
+                </section>
+                
             </section>
             
         </header>
@@ -356,19 +363,25 @@
                     <li class="mainP createCommentMetaData">SweetieBot</li>
                     <li class="subP createCommentMetaData"> @Sweetie </li>
                     <li class="dot createCommentMetaData">.</li> 
+                    <li class="subP createCommentMetaData">Nov 8</li>
                 </ul>
                 <ul class="originalPostData">
-                    <li class="mainP createCommentPostData">hello</li>
+                    <li class="mainP createCommentPostData">Hiii pic.x.com/sweetiebot-banner</li>
                 </ul>
             </div>
         </section>
         <section class="createComment">
             <img src="../assets/catgirl-pfp.jpg" alt="profilePicture" class="profilePicture">
-            <input type="text" placeholder="Add another post" class="createCommentText">
+            <textarea type="text" placeholder="Add another post" class="createCommentText" onchange="ready()"></textarea>
         </section>
         <section class="createCommentFooter">
             <section class="createCommentOptions">
-                <!--put graphics here-->
+                <img src="../assets/mediaIcon.png" alt="Add Media">
+                <img src="../assets/GIFIcon.png" alt="Add GIF">
+                <img src="../assets/pollIcon.png" alt="Add Poll">
+                <img src="../assets/emojiIcon.png" alt="Add Emoji">
+                <img src="../assets/scheduleIcon.png" alt="Schedule Post">
+                <img src="../assets/locationIcon.png" alt="Share Location">
             </section>
             <button onclick="postComment()" id="postComment">Post</button>
         </section>

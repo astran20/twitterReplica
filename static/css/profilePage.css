@@ -30,18 +30,29 @@ body{
     display: flex;
     align-items: center;
     gap: 20px;
+    height: 50px;
+    margin-bottom: 9px;
+    border-radius: 10rem;
+    margin-top: 0px;
 }
 
 #linksLeft{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 0%;
 }
 
 .navText{
     font-size: 20px;
     padding: 0;
     margin-bottom: 1rem;
+    color: white;
+}
+
+.linksLeft:hover{
+    background-color: var(--darkGray);
+
 }
 
 .textIcon{
@@ -126,6 +137,12 @@ header{
     position: sticky;
     top: 0%;
     z-index: 1;
+}
+
+#numPosts{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 header img{
@@ -637,6 +654,7 @@ a{
     position: fixed;
     top: 5vh;
     width: 45vw;
+    max-height: 90vh;
     border-radius: 5%;
     z-index: -1;
 }
@@ -651,6 +669,11 @@ a{
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 20px 10px 20px;
+}
+
+.createCommentPostData{
+    list-style-type: none;
+    margin: 0;
 }
 
 .closeCreateCommentButton{
@@ -711,7 +734,8 @@ a{
 }
 
 .originalPostData{
-    margin-left: 20px;
+    margin: 0px;
+    margin-left: 10px;
     padding: 0px;
 }
 
@@ -719,4 +743,67 @@ a{
     display: flex;
     flex-direction: column;
     gap: 0px;
+    align-items: start;
+}
+
+.createComment{
+    margin-left: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.createCommentText{
+    background-color: black;
+    color: white;
+    border: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    max-height: 60vh;
+
+    width: 40vw;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+}
+
+.createCommentOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.createCommentOptions img{
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+
+.createCommentFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+#postComment{
+    border-radius: 10em;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--blue);
+    margin-right: 20px;
+    margin-bottom: -10px;
+    opacity: 30%;
+}
+
+#postComment .notReady{
+    opacity: 30%;
 }

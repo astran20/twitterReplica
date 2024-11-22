@@ -91,8 +91,8 @@
             <section>   
                 <h1>SweetieBot</h1>
                 <section id="numPosts">
-                    <p class="subP numPosts">#</p>
-                    <p class="subP"> posts</p>
+                    <p class="subP numPosts" id="numPostIndicator">#</p>
+                    <p class="subP" id="postAmount"> posts</p>
                 </section>
                 
             </section>
@@ -372,7 +372,7 @@
         </section>
         <section class="createComment">
             <img src="../assets/catgirl-pfp.jpg" alt="profilePicture" class="profilePicture">
-            <textarea type="text" placeholder="Add another post" class="createCommentText" onchange="ready()"></textarea>
+            <textarea type="text" placeholder="Add another post" class="createCommentText" id="createCommentText" onchange="ready()"></textarea>
         </section>
         <section class="createCommentFooter">
             <section class="createCommentOptions">

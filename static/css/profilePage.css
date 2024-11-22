@@ -767,6 +767,7 @@ a{
     font-size: 20px;
     resize: none;
     outline: none;
+    font-family: sans-serif;
 }
 
 .createCommentOptions{
@@ -804,6 +805,6 @@ a{
     opacity: 30%;
 }
 
-#postComment .notReady{
-    opacity: 30%;
+#postComment .ready{
+    opacity: 100%;
 }

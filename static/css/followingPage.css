@@ -84,6 +84,7 @@ nav {
     color: var(--white);
 }
 
+/* grid */
 main {
     grid-column: 3/4;
     background-color: var(--black);

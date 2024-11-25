@@ -207,6 +207,7 @@ function postComment(){
                       newCommentShareButton.appendChild(newCommentShareButtonIcon)
   
   updateNumPosts()
+  createCommentText.value = ""
 }
 
 

@@ -84,14 +84,16 @@ nav {
     color: var(--white);
 }
 
+/* grid */
 main {
     grid-column: 3/4;
     background-color: var(--black);
-    display: grid;
-    grid-auto-rows: min-content;
+    display: grid; 
+    grid-auto-rows: minmax(min-content, max-content);
     grid-template-columns: 1fr;
     position: relative;
     border: 0.5rem solid var(--darkGray);
+    overflow-y: auto;
 }
 
 header {
@@ -197,4 +199,30 @@ aside {
 #who-to-follow h2 {
     font-size: 5rem;
     color: var(--white);
+}
+
+.post {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    padding: 5rem 5rem;
+    align-items: center;
+    border-bottom: 0.5rem solid var(--darkGray);
+}
+
+.post-profile-pic {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 10rem;
+}
+
+.post-text {
+    width: 170rem;
+    height: auto;
+    font-size: 10rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
 }

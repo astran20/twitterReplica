@@ -30,11 +30,15 @@ function ready(){
 }
 
 function postComment(){
+  const originalPost = document.querySelector("article")
+  originalPost.style.borderBottom = 0;
+
   const createCommentText = document.getElementById("createCommentText")
   const createCommentTextData = createCommentText.value
   console.log(createCommentTextData)
   
   closePopup()
+  makeLine()
 
   const mainTag = document.querySelector("main")
     const newArticle = document.createElement("article")
@@ -111,8 +115,8 @@ function postComment(){
                     newCommentCommentButtonIcon.className = "textIcon postIcon"
 
                 const newCommentCommentAmount = document.createElement("p")
-                newCommentCommentAmount.textContent = " "
-                newCommentCommentAmount.className = "subP newSubP"
+                newCommentCommentAmount.textContent = "##"
+                newCommentCommentAmount.className = "subP amount"
 
 
 
@@ -125,7 +129,11 @@ function postComment(){
                     const newCommentRepostButtonIcon = document.createElement("img")
                     newCommentRepostButtonIcon.src = "../assets/repostIcon.png"
                     newCommentRepostButtonIcon.className = "textIcon postIcon"
-            
+
+                    const newCommentRepostButtonAmount = document.createElement("p")
+                    newCommentRepostButtonAmount.textContent = "##"
+                    newCommentRepostButtonAmount.className = "subP amount"
+
             const newCommentPostOptionsLiLikeButton = document.createElement("li")
             newCommentPostOptionsLiLikeButton.className = "postOptions"
 
@@ -136,6 +144,10 @@ function postComment(){
                     newCommentLikeButtonIcon.src = "../assets/likeIcon.png"
                     newCommentLikeButtonIcon.className = "textIcon postIcon"
 
+                    const newCommentLikeButtonAmount = document.createElement("p")
+                    newCommentLikeButtonAmount.textContent = "###"
+                    newCommentLikeButtonAmount.className = "subP amount"
+
             const newCommentPostOptionsLiViewButton = document.createElement("li")
             newCommentPostOptionsLiViewButton.className = "postOptions"
 
@@ -145,6 +157,10 @@ function postComment(){
                     const newCommentViewButtonIcon = document.createElement("img")
                     newCommentViewButtonIcon.src = "../assets/viewsIcon.png"
                     newCommentViewButtonIcon.className = "textIcon postIcon"
+
+                    const newCommentViewButtonAmount = document.createElement("p")
+                    newCommentViewButtonAmount.textContent = "###"
+                    newCommentViewButtonAmount.className = "subP amount"
             
             const newCommentPostOptionsLiBookmarkButton = document.createElement("li")
             newCommentPostOptionsLiBookmarkButton.className = "postOptions"
@@ -193,12 +209,15 @@ function postComment(){
               newCommentPostOptionsUl.appendChild(newCommentPostOptionsLiRepostButton)
                   newCommentPostOptionsLiRepostButton.appendChild(newCommentRepostButton)
                       newCommentRepostButton.appendChild(newCommentRepostButtonIcon)
+                  newCommentPostOptionsLiRepostButton.appendChild(newCommentRepostButtonAmount)
               newCommentPostOptionsUl.appendChild(newCommentPostOptionsLiLikeButton)
                   newCommentPostOptionsLiLikeButton.appendChild(newCommentLikeButton)
                       newCommentLikeButton.appendChild(newCommentLikeButtonIcon)
+                  newCommentPostOptionsLiLikeButton.appendChild(newCommentLikeButtonAmount)
               newCommentPostOptionsUl.appendChild(newCommentPostOptionsLiViewButton)
                   newCommentPostOptionsLiViewButton.appendChild(newCommentViewButton)
                       newCommentViewButton.appendChild(newCommentViewButtonIcon)
+                  newCommentPostOptionsLiViewButton.appendChild(newCommentViewButtonAmount)
               newCommentPostOptionsUl.appendChild(newCommentPostOptionsLiBookmarkButton)
                   newCommentPostOptionsLiBookmarkButton.appendChild(newCommentBookmarkButton)
                       newCommentBookmarkButton.appendChild(newCommentBookmarkButtonIcon)
@@ -224,5 +243,14 @@ function updateNumPosts(){
   }else{
     postAmountIndicator.textContent = "posts"
   }
+}
+
+function makeLine(){
+    const line = document.createElement("div")
+    line.className = "replyLine"
+    const articleHeight = document.querySelector("article").offsetHeight
+    line.style.height = articleHeight - 70 + 'px'
+    console.log(articleHeight)
+    document.getElementById("originalPostPfp").appendChild(line)
 }
 

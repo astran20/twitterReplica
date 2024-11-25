@@ -852,3 +852,19 @@ a{
     margin-top: 5px !important;
     margin-bottom: 5px !important;
 }
+
+.replyLine{
+    background-color: var(--gray);
+    width: 1px;
+    margin-left: 35px;
+}
+
+article > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.amount{
+    opacity: 0%;
+    margin-bottom: 0px;
+}

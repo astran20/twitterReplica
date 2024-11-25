@@ -30,18 +30,29 @@ body{
     display: flex;
     align-items: center;
     gap: 20px;
+    height: 50px;
+    margin-bottom: 9px;
+    border-radius: 10rem;
+    margin-top: 0px;
 }
 
 #linksLeft{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 0%;
 }
 
 .navText{
     font-size: 20px;
     padding: 0;
     margin-bottom: 1rem;
+    color: white;
+}
+
+.linksLeft:hover{
+    background-color: var(--darkGray);
+
 }
 
 .textIcon{
@@ -126,6 +137,12 @@ header{
     position: sticky;
     top: 0%;
     z-index: 1;
+}
+
+#numPosts{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
 header img{
@@ -292,6 +309,7 @@ article{
     display: flex;
     flex-direction: row;
     max-width: 40vw;
+    align-items: start;
 }
 
 article section{
@@ -331,6 +349,10 @@ article section{
     align-items: center;
 }
 
+.postMetaData div p{
+    margin-bottom: 5px;
+}
+
 .postMetaData img{
     justify-self: end;
     align-self: end;
@@ -354,8 +376,9 @@ article section{
 }
 
 .postOptions .subP{
-    margin-left: 10px;
+    margin-left: 5px;
 }
+
 .postIcon{
     margin: 0;
 
@@ -598,33 +621,30 @@ aside > div{
 footer{
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 #footerR1, #footerR2{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     padding: 0;
     margin: 0;
     margin-left: 15px;
     margin-right: 15px;
-    gap: 10px;
+    gap: 20px;
 }
 
 #footerR1 li, #footerR2 li{
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    gap: 1px;
 }
 
 .footerText{
-    margin: 1px;
+    margin: 0px;
     text-wrap: nowrap;
-}
-
-.footerMore{
-    display: flex;
-    flex-direction: row;
+    font-size: small;
 }
 
 a{
@@ -637,6 +657,7 @@ a{
     position: fixed;
     top: 5vh;
     width: 45vw;
+    max-height: 90vh;
     border-radius: 5%;
     z-index: -1;
 }
@@ -651,6 +672,11 @@ a{
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 20px 10px 20px;
+}
+
+.createCommentPostData{
+    list-style-type: none;
+    margin: 0;
 }
 
 .closeCreateCommentButton{
@@ -711,7 +737,8 @@ a{
 }
 
 .originalPostData{
-    margin-left: 20px;
+    margin: 0px;
+    margin-left: 10px;
     padding: 0px;
 }
 
@@ -719,4 +746,125 @@ a{
     display: flex;
     flex-direction: column;
     gap: 0px;
+    align-items: start;
+}
+
+.createComment{
+    margin-left: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.createCommentText{
+    background-color: black;
+    color: white;
+    border: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    max-height: 60vh;
+
+    width: 40vw;
+    font-size: 20px;
+    resize: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.createCommentOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.createCommentOptions img{
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+
+.createCommentFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+#postComment{
+    border-radius: 10em;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--blue);
+    margin-right: 20px;
+    margin-bottom: -10px;
+    opacity: 30%;
+}
+
+#postComment .ready{
+    opacity: 100%;
+}
+
+.newCommentContent{
+    margin-top: -5px;
+}
+
+.replyingTo{
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.postData div{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.postData div p{
+    margin-bottom: 5px;
+}
+
+.ogPoster{
+    color: var(--blue);
+}
+
+.ogPoster:hover{
+    text-decoration: underline;
+}
+
+.newCommentMetaData{
+    margin-bottom: 5px;
+}
+
+.newCommentDot{
+    margin-bottom: 0px;
+}
+
+.newPostOptions{
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.replyLine{
+    background-color: var(--gray);
+    width: 1px;
+    margin-left: 35px;
+}
+
+article > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.amount{
+    opacity: 0%;
+    margin-bottom: 0px;
 }

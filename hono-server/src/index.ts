@@ -8,7 +8,7 @@ const app = new Hono()
 app.use('/*', serveStatic({
   root: '../static',
   rewriteRequestPath: (path) => {
-    if (path === '/') return '/html/profilePage.html'
+    if (path === '/') return '/html/followingPage.html'
     return path
   }
 }))

@@ -1,3 +1,27 @@
+//load posts
+function loadPosts() {
+    const posts = JSON.parse(localStorage.getItem('posts'));
+    posts.forEach(postText => {
+        const postDiv = document.createElement("div");
+        postDiv.className = "post";
+
+        const profilePic = document.createElement("img");
+        profilePic.src = "../assets/catgirl-pfp.jpg";
+        profilePic.className = "post-profile-pic";
+        
+        const postTextDiv = document.createElement("div");
+        postTextDiv.className = "post-text";
+        postTextDiv.textContent = postText;
+
+        postDiv.appendChild(profilePic);
+        postDiv.appendChild(postTextDiv);
+        document.querySelector('main').appendChild(postDiv);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadPosts);
+
+
 const commentPopup = document.getElementById("commentPopup")
 
 const comment = document.getElementsByClassName("commentButton")

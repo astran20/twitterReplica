@@ -54,8 +54,9 @@ function ready(){
 }
 
 function postComment(){
-  const originalPost = document.querySelector("article")
-  originalPost.style.borderBottom = 0;
+  const originalPost = document.getElementsByTagName("article")
+  const latestPost = originalPost[originalPost.length-1]
+  latestPost.style.borderBottom = 0;
 
   const createCommentText = document.getElementById("createCommentText")
   const createCommentTextData = createCommentText.value
@@ -67,10 +68,13 @@ function postComment(){
   const mainTag = document.querySelector("main")
     const newArticle = document.createElement("article")
     newArticle.className = "feed"
-  
-      const profilePic = document.createElement("img")
-      profilePic.src = "../assets/catgirl-pfp.jpg"
-      profilePic.className = "icons profilePicture"
+    
+      const newPfp = document.createElement("div")
+      newPfp.className = "originalPostPfp"  
+
+        const profilePic = document.createElement("img")
+        profilePic.src = "../assets/catgirl-pfp.jpg"
+        profilePic.className = "icons profilePicture"
   
       const mainContent = document.createElement("section")
       mainContent.className = "newCommentContent"
@@ -99,12 +103,16 @@ function postComment(){
                 let month = months [d.getMonth()]
                 const thisMonth = document.createElement("p")
                 thisMonth.textContent = month
-                thisMonth.className = "subP newCommentMetaData"
-
+                
                 const thisDay = document.createElement("p")
                 thisDay.textContent = d.getDate()
-                thisDay.className = "subP newCommentMetaData"
-              
+
+                const thisDateData = thisMonth.textContent + (" ") + thisDay.textContent
+                const thisDate = document.createElement("p")
+                thisDate.textContent = thisDateData
+                thisDate.className = "subP newCommentMetaData postDate"
+
+
             const moreIcon = document.createElement("img")
             moreIcon.src = "../assets/moreIconGray.png"
             moreIcon.classList = "icons postMore"
@@ -120,7 +128,7 @@ function postComment(){
 
         const postText = document.createElement("p")
         postText.textContent = createCommentTextData
-        postText.classList = "mainP postText"
+        postText.className = "mainP postText"
 
         const newCommentPostOptionsUl = document.createElement("ul")
         newCommentPostOptionsUl.id = "postOptions"
@@ -133,6 +141,7 @@ function postComment(){
                 newCommentCommentButton.id = "commentButton"
                 newCommentCommentButton.className = "postButton commentButton"
                 newCommentCommentButton.title = "Reply"
+                newCommentCommentButton.addEventListener("click", commentCreate)
 
                     const newCommentCommentButtonIcon = document.createElement("img")
                     newCommentCommentButtonIcon.src = "../assets/commentsIcon.png"
@@ -209,7 +218,8 @@ function postComment(){
 
 
   mainTag.appendChild(newArticle)
-      newArticle.appendChild(profilePic)
+      newArticle.appendChild(newPfp)
+            newPfp.appendChild(profilePic)
       newArticle.appendChild(mainContent)
           mainContent.appendChild(postData)
               postData.appendChild(postMetaData)
@@ -217,8 +227,7 @@ function postComment(){
                       div.appendChild(userName)
                       div.appendChild(userTag)
                       div.appendChild(dot)
-                      div.appendChild(thisMonth)
-                      div.appendChild(thisDay)
+                      div.appendChild(thisDate)
                   postMetaData.appendChild(moreIcon)
               postData.appendChild(div2)
                 div2.appendChild(replyText)
@@ -250,7 +259,9 @@ function postComment(){
                       newCommentShareButton.appendChild(newCommentShareButtonIcon)
   
   updateNumPosts()
-  createCommentText.value = ""
+  originalText()
+  createCommentText.value = ""  
+
 }
 
 
@@ -272,9 +283,30 @@ function updateNumPosts(){
 function makeLine(){
     const line = document.createElement("div")
     line.className = "replyLine"
-    const articleHeight = document.querySelector("article").offsetHeight
+    const originalPost = document.getElementsByTagName("article")
+    const latestPost = originalPost[originalPost.length-1]
+    const articleHeight = latestPost.offsetHeight
     line.style.height = articleHeight - 70 + 'px'
     console.log(articleHeight)
-    document.getElementById("originalPostPfp").appendChild(line)
+    const ogPostPfp = document.getElementsByClassName("originalPostPfp")
+    const latestPostPfp = ogPostPfp[ogPostPfp.length-1]
+    latestPostPfp.appendChild(line)
 }
 
+function originalText(){
+    const ogTextData = document.getElementById("createCommentPostData")
+    const replyingToData = document.getElementsByClassName("postText")
+    const replyingTo = replyingToData[replyingToData.length-1]
+    const replyingToText = replyingTo.textContent
+    
+    ogTextData.textContent = replyingToText
+
+    const ogDate = document.getElementById("postDate")
+    const dateData = document.getElementsByClassName("postDate")
+    const latestDateData = dateData[dateData.length-1]
+    const latestDateDataText = latestDateData.textContent
+
+    ogDate.textContent = latestDateDataText 
+}
+
+originalText()

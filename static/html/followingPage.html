@@ -9,47 +9,261 @@
 </head>
 <body>
     <nav>
-        <img id="twitter-logo" src="../assets/XIcon.png" alt="X Logo">
-        <ul id="functionality-links">
-            <li><a href="/home"><img class="sidebar-icons" src="../assets/homeIcon.png" alt="">Home</a></li>
-            <li><a href="/explore"><img class="sidebar-icons" src="../assets/exploreIcon.png" alt="">Explore</a></li>
-            <li><a href="/notifications"><img class="sidebar-icons" src="../assets/notificationIcon.png" alt="">Notifications</a></li>
-            <li><a href="/messages"><img class="sidebar-icons" src="../assets/messagesIcon.png" alt="">Messages</a></li>
-            <li><a href="/grok"><img class="sidebar-icons" src="../assets/grokIcon.png" alt="">Grok</a></li>
-            <li><a href="/premium"><img class="sidebar-icons" src="../assets/XIcon.png" alt="">Premium</a></li>
-            <li><a href="/bookmarks"><img class="sidebar-icons" src="../assets/bookmarkIcon.png" alt="">Bookmarks</a></li>
-            <li><a href="/jobs"><img class="sidebar-icons" src="../assets/jobsIcon.png" alt="">Jobs</a></li>
-            <li><a href="/communities"><img class="sidebar-icons" src="../assets/communitiesIcon.png" alt="">Communities</a></li>
-            <li><a href="/verified-orgs"><img class="sidebar-icons" src="../assets/verifiedOrgsIcon.png" alt="">Verified Orgs</a></li>
-            <li><a href="/profile"><img class="sidebar-icons" src="../assets/profileIcon.png" alt="">Profile</a></li>
-            <li><a href="/more"><img class="sidebar-icons" src="../assets/moreNavIcon.png" alt="">More</a></li>
+        <ul id="linksLeft">
+            <li class="linksLeft">
+                <img src="../assets/XIcon.png" alt="X.com Logo" class="icons">
+            </li>
+
+            <li class="linksLeft">
+                <a href="../html/followingPage.html" class="linksLeft">
+                    <img src="../assets/homeIcon.png" alt="Home Icon" class="icons">
+                     <p class="navText">Home</p>
+                </a>
+                
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/exploreIcon.png" alt="Explore Icon" class="icons">
+                <p class="navText">Explore</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/notificationIcon.png" alt="Notifications Icon" class="icons">
+                <p class="navText">Notifications</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/messagesIcon.png" alt="Messages Icon" class="icons">
+                <p class="navText">Messages</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/grokIcon.png" alt="Grok Icon" class="icons">
+                <p class="navText">Grok</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/bookmarksIcon.png" alt="Bookmarks Icon" class="icons">
+                <p class="navText">Bookmarks</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/communitiesIcon.png" alt="Communities Icon" class="icons">
+                <p class="navText">Communities</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/XIcon.png" alt="Premium Icon" class="icons">
+                <p class="navText">Premium</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/verifiedOrgsIcon.png" alt="Verified Orgs Icon" class="icons">
+                <p class="navText">Verified Orgs</p>
+            </li>
+
+            <li class="linksLeft" class="selectedNav">
+                <img src="../assets/profileIcon.png" alt="Profile Icon Selected" class="icons">
+                <p class="navText navTextSelected">Profile</p>
+            </li>
+
+            <li class="linksLeft">
+                <img src="../assets/moreNavIcon.png" alt="More Icon" class="icons">
+                <p class="navText">More</p>
+            </li>
         </ul>
-        <button id="post-button" type="button">Post</button>
-        <div id="profile-pic-container">
-            <img class="profile-pic" alt="profile-pic" src="../assets/catgirl-pfp.jpg">
-            <a id="profile-link" href="/profile">Profile</a>
-        </div>
+
+        <button id="postBtn">Post</button>
+
+        <section id="account">
+            <img src="../assets/catgirl-pfp.jpg" alt="Profile Picture" class="icons profilePicture">
+            <section>
+                <a href="../html/profilePage.html" class="mainP">SweetieBot</a>
+                <p class="subP">@Sweetie</p>
+            </section>
+            <img src="../assets/moreIcon.png" alt="More Icon" class="icons">
+        </section>
     </nav>
+
     <main>
         <header>
             <button id="for-you-button" type="button">For You</button>
             <button id="following-button" type="button">Following</button>
         </header>
         <div id="post-compose">
-            <img class="profile-pic" src="../assets/catgirl-pfp.jpg" alt="profile picture">
-            <input type="text" id="compose-input" placeholder="What is happening?!">
-            <button type="button" id="compose-post-btn">Post</button>
+            <div id = "compose-top">
+                <img id="PFP" src="../assets/catgirl-pfp.jpg" alt="profile picture">
+                <textarea rows = "1" type="text" id="compose-input" placeholder="What is happening?!"></textarea>
+            </div>
+            <div id = "compose-bottom">                
+                <section class="createCommentOptions">
+                    <img src="../assets/mediaIcon.png" alt="Add Media">
+                    <img src="../assets/GIFIcon.png" alt="Add GIF">
+                    <img src="../assets/pollIcon.png" alt="Add Poll">
+                    <img src="../assets/emojiIcon.png" alt="Add Emoji">
+                    <img src="../assets/scheduleIcon.png" alt="Schedule Post">
+                    <img src="../assets/locationIcon.png" alt="Share Location">
+                </section>
+                <button type="button" id="compose-post-btn">Post</button>
+            </div>
         </div>
-        <!-- Additional "post" class and post elements are supposed to be created here with JavaScript -->
     </main>
+
     <aside>
-        <input type="text" id="search-input" placeholder="Search">
-        <div id="explore">
-            <h2>Explore</h2>
+        <div>
+        <section id="searchBox">
+            <img src="../assets/searchIcon.png" alt="Search Icon" class="textIcon" id="searchIcon">
+            <input type="text" placeholder="Search" id="searchBoxInput"> 
+        </section>
         </div>
-        <div id="who-to-follow">
-            <h2>Who to follow</h2>
-        </div>
-    </aside>
+        
+        <section id="recommended">
+            <p class="subtitle">You might like</p>
+            <ul id="recommendedAccounts">
+                <li class="recommendedAccounts">
+                    <section class="profile">
+                        <img src="../assets/cinccino-pfp.jpg" alt="Profile Picture" class="profilePicture">
+                        <section>
+                            <p class="mainP username">CinccinoFan573</p>
+                            <p class="subP">@CinccinoFan</p>   
+                        </section>
+                    </section>
+                    <button class="followButton">Follow</button>
+                </li>
+
+                <li class="recommendedAccounts">
+                    <section class="profile">
+                        <img src="../assets/seaotter-pfp.jpg" alt="Profile Picture" class="profilePicture">
+                        <section>
+                            <p class="mainP username">CuteOttersDaily</p>
+                            <p class="subP">@DailyOtters</p>   
+                        </section>
+                    </section>
+                    <button class="followButton">Follow</button>
+                </li>
+
+                <li class="recommendedAccounts">
+                    <section class="profile">
+                        <img src="../assets/shawntorres-pfp.jpg" alt="Profile Picture" class="profilePicture">
+                        <section>
+                            <p class="mainP username">Shawn Torres</p>
+                            <p class="subP">@cauliflowercarrotdog</p>   
+                        </section>
+                    </section>
+                    <button class="followButton">Follow</button>
+                </li>
+            </ul>
+            <p class="showMore"><a href="#" class="showMore">Show more</a></p>
+        </section>
+
+        <section id="newsFeed">
+            <p class="subtitle">What's happening</p>
+            <section id="event">
+                <a href="" class="event">
+                    <img src="../assets/seniorsaturday.jpg" alt="Event Picture" id="eventPicture">
+                    <section>
+                        <p class="mainP trendName">Senior Saturday</p>
+                        <section id="eventInfoLive">
+                            <p class="subP">Events </p>
+                            <p class="dot">.</p> 
+                            <p class="hype">Live</p>
+                        </section>
+                        
+                        <p class="subP trendWith">Trending with <a class="trend">#SCU</a></p>    
+                    </section>
+                </a>
+            </section>
+            <ul id="recommendedNewsList">
+                <li class="recommendedNews">
+                    <section>
+                        <section class="topic">
+                            <p class="subP">Gaming</p> 
+                            <p class="dot">.</p> 
+                            <p class="subP">Trending</p>
+                        </section>
+                        <p class="mainP trendName">Faker</p>
+                        <p class="subP">34.6k posts</p>    
+                    </section>
+                    
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
+                </li>
+
+                <li class="recommendedNews">
+                    <section>
+                        <section class="topic">
+                            <p class="subP">Insane Ink</p> 
+                            <p class="dot">.</p> 
+                            <p class="subP">Trending</p>
+                        </section>
+                        <p class="mainP trendName">New Treasure Trove Item</p>
+                        <p class="subP">75.6k posts</p>    
+                    </section>
+                    
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
+                </li>
+
+                <li class="recommendedNews">
+                    <section>
+                        <section class="topic">
+                            <p class="subP">PHHS Key Club</p> 
+                            <p class="dot">.</p> 
+                            <p class="subP">Trending</p>
+                        </section>
+                        <p class="mainP trendName">Christmas In the Park</p>
+                        <p class="subP">40.1k posts</p>    
+                    </section>
+                    
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
+                </li>
+
+                <li class="recommendedNews">
+                    <section>
+                        <section class="topic">
+                            <p class="subP">Gaming</p> 
+                            <p class="dot">.</p> 
+                            <p class="subP">Trending</p>
+                        </section>
+                        <p class="mainP trendName">Arcane</p>
+                        <p class="subP">93.7k posts</p>    
+                    </section>
+                    
+                    <img src="../assets/moreIconGray.png" alt="More Icon" class="icons">
+                </li>
+            </ul>
+                <p class="showMore"><a href="#" class="showMore">Show More</a></p>
+        </section>
+
+        <footer>
+            <ul id="footerR1">
+                <li>            
+                    <a href=""><p class="subP footerText">Terms of Service</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP footerText">Privacy Policy</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP footerText">Cookie Policy</p></a>
+                </li>
+            </ul>
+
+            <ul id="footerR2">
+                <li>
+                    <a href=""><p class="subP footerText">Accessibility</p></a>
+                </li>
+                <li>
+                    <a href=""><p class="subP footerText">Ads Info</p></a>
+                </li>
+                <li>
+                    <a href="" id="footerMore">
+                        <p class="subP footerText">More •••</p>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><p class="subP footerText" >© 2024 X Corp.</p></a>
+                </li>
+            </ul>
+
+        </footer>
+    </aside> 
 </body>
 </html>

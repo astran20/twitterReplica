@@ -361,7 +361,7 @@ article section{
     margin: 0;
 }
 
-#postOptions{
+.postOptionData{
     display: flex;
     flex-direction: row;
     justify-content: space-between;

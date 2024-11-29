@@ -14,6 +14,7 @@ function addPost(text, location) {
             <div class="postTop">
                 <span class="post-name-date">SweetieBot</span>
                 <span class="post-name-date postDate">${month} ${day}</span>
+                <span class="post-dot">• • •</span>
             </div>
             <div class="postMiddle">
                 <p class="postText">${text}</p>
@@ -41,6 +42,19 @@ function addPost(text, location) {
                         </button>
                     </li>
                 </ul>
+                <ul class="AdditionalPostOptions">
+                    <li class="postOptions">
+                        <button class="postButton bookmarkButton">
+                            <img src="../assets/bookmarkIcon.png" class="textIcon postIcon">
+                        </button>
+                    </li>
+                    <li class="postOptions">
+                        <button class="postButton shareButton">
+                            <img src="../assets/shareIcon.png" class="textIcon postIcon">
+                        </button>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </article>

@@ -16,6 +16,8 @@ function loadPosts() {
     document.querySelectorAll('.commentButton').forEach(button => {
         button.addEventListener("click", commentCreate)
     });
+    originalText();
+    updateNumPosts();
 }
 
 document.addEventListener('DOMContentLoaded', loadPosts);
@@ -128,8 +130,7 @@ function postComment(){
         postText.className = "mainP postText"
 
         const newCommentPostOptionsUl = document.createElement("ul")
-        newCommentPostOptionsUl.id = "postOptions"
-        newCommentPostOptionsUl.className = "newPostOptions"
+        newCommentPostOptionsUl.className = "newPostOptions postOptionData"
 
             const newCommentPostOptionsLiCommentButton = document.createElement("li")
             newCommentPostOptionsLiCommentButton.className = "postOptions"
@@ -294,6 +295,7 @@ function originalText(){
     const ogTextData = document.getElementById("createCommentPostData")
     const replyingToData = document.getElementsByClassName("postText")
     const replyingTo = replyingToData[replyingToData.length-1]
+    
     const replyingToText = replyingTo.textContent
     
     ogTextData.textContent = replyingToText
@@ -306,7 +308,6 @@ function originalText(){
     ogDate.textContent = latestDateDataText 
 }
 
-originalText()
 
 
 

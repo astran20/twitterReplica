@@ -7,7 +7,9 @@ function addPost(text, location) {
 
     const postTemplate = `
     <article class="post">
-        <image src = "../assets/catgirl-pfp.jpg" class="post-profile-pic">
+        <div class="originalPostPfp">
+            <image src = "../assets/catgirl-pfp.jpg" class="post-profile-pic ">
+        </div>
         <div class="postBody">
             <div class="postTop">
                 <span class="post-name-date">SweetieBot</span>
@@ -15,10 +17,10 @@ function addPost(text, location) {
                 <span class="post-dot">• • •</span>
             </div>
             <div class="postMiddle">
-                <p class="post-text">${text}</p>
+                <p class="postText">${text}</p>
             </div>
             <div class="postBottom">
-                <ul class="postOptions">
+                <ul class="postOptionData">
                     <li class="postOptions">
                         <button class="postButton commentButton">
                             <img src="../assets/commentsIcon.png" class="textIcon postIcon">
@@ -57,7 +59,7 @@ function addPost(text, location) {
         </div>
     </article>
     `
-    const post = document.createElement("article");
+    const post = document.createElement("div");
     post.innerHTML = postTemplate;
 
 

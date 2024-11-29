@@ -453,8 +453,8 @@ header button {
 }
 
 #PFP{
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     border-radius: 10rem;
 }
 
@@ -508,14 +508,20 @@ header button {
 
 .post {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     border-bottom: 1px solid var(--darkGray);
 }
 
+.postTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .post-profile-pic {
-    width: 5rem;
-    height: 5rem;
+    width: 50px;
+    height: 50px;
     border-radius: 10rem;
     margin: 1rem;
 }
@@ -531,3 +537,11 @@ header button {
     flex-wrap: wrap;
     overflow-wrap: break-word;
 }
+
+.postBottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+

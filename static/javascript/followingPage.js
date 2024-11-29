@@ -11,28 +11,33 @@ textarea.addEventListener('input', function () {
 const addButton = document.getElementById("compose-post-btn");
 const inputField = document.getElementById("compose-input");
 const postCompose = document.getElementById("post-compose");
+const main = document.querySelector("main");
 
-function addPost() {
-
-    if (!inputField.value.trim()) {
-        return;
-    }
-
-    const postDiv = document.createElement("div");
+function addPost(text, location) {
+    const postDiv = document.createElement("article");
     postDiv.className = "post";
+
+    const postTop = document.createElement("div");
+    postTop.className = "postTop";
 
     const profilePic = document.createElement("img");
     profilePic.src = "../assets/catgirl-pfp.jpg";
     profilePic.className = "post-profile-pic";
+    postTop.appendChild(profilePic);
     
     const postText = document.createElement("div");
     postText.className = "post-text";
-    postText.textContent = inputField.value;
+    postText.textContent = text;
+    postTop.appendChild(postText);
 
-    postDiv.appendChild(profilePic);
-    postDiv.appendChild(postText);
-    postCompose.after(postDiv);
-    
+    postDiv.appendChild(postTop);
+
+    if (location === "start") {
+        postCompose.after(postDiv);
+    } else if (location === "end") {
+        main.appendChild(postDiv);
+    }
+
     inputField.value = "";
     savePosts();
 }
@@ -40,7 +45,9 @@ function addPost() {
 addButton.addEventListener("click", addPost);
 inputField.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        addPost();
+        if (inputField.value.trim()) {
+            addPost(inputField.value, "start");
+        }
     }
 });
 
@@ -48,7 +55,7 @@ inputField.addEventListener("keypress", function(event) {
 
 function savePosts() {
     const posts = [];
-    document.querySelectorAll('.post .post-text').forEach(post => {
+    document.querySelectorAll('.post .postTop .post-text').forEach(post => {
         posts.push(post.textContent);
     });
     localStorage.setItem('posts', JSON.stringify(posts));
@@ -59,20 +66,7 @@ function loadPosts() {
     
     posts.forEach(postText => {
         if (postText && postText.trim()) {
-            const postDiv = document.createElement("div");
-            postDiv.className = "post";
-
-            const profilePic = document.createElement("img");
-            profilePic.src = "../assets/catgirl-pfp.jpg";
-            profilePic.className = "post-profile-pic";
-            
-            const postTextDiv = document.createElement("div");
-            postTextDiv.className = "post-text";
-            postTextDiv.textContent = postText;
-
-            postDiv.appendChild(profilePic);
-            postDiv.appendChild(postTextDiv);
-            document.querySelector('main').appendChild(postDiv);
+          addPost(postText, "end");
         }
     });
 }

@@ -1,30 +1,27 @@
-//load posts
+import { addPost } from './postFunctions.js';
+console.log("profilePage.js loaded")
+
 function loadPosts() {
+
+    console.log("Profile Page Adding Posts")
     const posts = JSON.parse(localStorage.getItem('posts'));
-    posts.forEach(postText => {
-        const postDiv = document.createElement("div");
-        postDiv.className = "post";
-
-        const profilePic = document.createElement("img");
-        profilePic.src = "../assets/catgirl-pfp.jpg";
-        profilePic.className = "post-profile-pic";
-        
-        const postTextDiv = document.createElement("div");
-        postTextDiv.className = "post-text";
-        postTextDiv.textContent = postText;
-
-        postDiv.appendChild(profilePic);
-        postDiv.appendChild(postTextDiv);
-        document.querySelector('main').appendChild(postDiv);
+    if (posts) {
+        posts.forEach(postText => {
+            console.log("postText: " + postText)
+            if (postText && postText.trim()) {
+                addPost(postText, "end");
+            }
+        });
+    }
+    document.querySelectorAll('.commentButton').forEach(button => {
+        button.addEventListener("click", commentCreate)
     });
 }
 
 document.addEventListener('DOMContentLoaded', loadPosts);
 
-
 const commentPopup = document.getElementById("commentPopup")
 
-const comment = document.getElementsByClassName("commentButton")
 commentButton.addEventListener("click",commentCreate) 
 
 const commentPopupBg = document.getElementById("commentPopupBackground")
@@ -49,7 +46,7 @@ document.querySelectorAll('textarea').forEach( element => {
 
 function ready(){
     const postComment = document.getElementById("postComment")
-    postComment.style.opacity = "100%";
+    postComment.style.opacity = "100%"
     postComment.classList.add("ready")
 }
 
@@ -310,3 +307,16 @@ function originalText(){
 }
 
 originalText()
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const commentTextArea = document.getElementById("createCommentText")
+    const postCommentButton = document.getElementById("postComment")
+    const closePopupButton = document.querySelector(".closeCreateCommentButton")
+    
+    commentTextArea.addEventListener('input', ready)
+    postCommentButton.addEventListener('click', postComment)
+    closePopupButton.addEventListener('click', closePopup)
+})

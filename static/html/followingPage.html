@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>followingPage</title>
     <link rel="stylesheet" href="../css/followingPage.css">
-    <script src="../javascript/followingPage.js" defer></script>
+    <link rel="stylesheet" href="../css/post.css">
+    <script type="module" src="../javascript/followingPage.js" defer></script>
 </head>
 <body>
     <nav>
@@ -63,8 +64,10 @@
             </li>
 
             <li class="linksLeft" class="selectedNav">
-                <img src="../assets/profileIcon.png" alt="Profile Icon Selected" class="icons">
-                <p class="navText navTextSelected">Profile</p>
+                <a href="../html/profilePage.html" class="linksLeft">
+                    <img src="../assets/profileIcon.png" alt="Profile Icon Selected" class="icons">
+                    <p class="navText navTextSelected">Profile</p>
+                </a>
             </li>
 
             <li class="linksLeft">
@@ -117,44 +120,7 @@
         </section>
         </div>
         
-        <section id="recommended">
-            <p class="subtitle">You might like</p>
-            <ul id="recommendedAccounts">
-                <li class="recommendedAccounts">
-                    <section class="profile">
-                        <img src="../assets/cinccino-pfp.jpg" alt="Profile Picture" class="profilePicture">
-                        <section>
-                            <p class="mainP username">CinccinoFan573</p>
-                            <p class="subP">@CinccinoFan</p>   
-                        </section>
-                    </section>
-                    <button class="followButton">Follow</button>
-                </li>
 
-                <li class="recommendedAccounts">
-                    <section class="profile">
-                        <img src="../assets/seaotter-pfp.jpg" alt="Profile Picture" class="profilePicture">
-                        <section>
-                            <p class="mainP username">CuteOttersDaily</p>
-                            <p class="subP">@DailyOtters</p>   
-                        </section>
-                    </section>
-                    <button class="followButton">Follow</button>
-                </li>
-
-                <li class="recommendedAccounts">
-                    <section class="profile">
-                        <img src="../assets/shawntorres-pfp.jpg" alt="Profile Picture" class="profilePicture">
-                        <section>
-                            <p class="mainP username">Shawn Torres</p>
-                            <p class="subP">@cauliflowercarrotdog</p>   
-                        </section>
-                    </section>
-                    <button class="followButton">Follow</button>
-                </li>
-            </ul>
-            <p class="showMore"><a href="#" class="showMore">Show more</a></p>
-        </section>
 
         <section id="newsFeed">
             <p class="subtitle">What's happening</p>
@@ -231,6 +197,45 @@
                 </li>
             </ul>
                 <p class="showMore"><a href="#" class="showMore">Show More</a></p>
+        </section>
+
+        <section id="recommended">
+            <p class="subtitle">Who to follow</p>
+            <ul id="recommendedAccounts">
+                <li class="recommendedAccounts">
+                    <section class="profile">
+                        <img src="../assets/cinccino-pfp.jpg" alt="Profile Picture" class="profilePicture">
+                        <section>
+                            <p class="mainP username">CinccinoFan573</p>
+                            <p class="subP">@CinccinoFan</p>   
+                        </section>
+                    </section>
+                    <button class="followButton">Follow</button>
+                </li>
+
+                <li class="recommendedAccounts">
+                    <section class="profile">
+                        <img src="../assets/seaotter-pfp.jpg" alt="Profile Picture" class="profilePicture">
+                        <section>
+                            <p class="mainP username">CuteOttersDaily</p>
+                            <p class="subP">@DailyOtters</p>   
+                        </section>
+                    </section>
+                    <button class="followButton">Follow</button>
+                </li>
+
+                <li class="recommendedAccounts">
+                    <section class="profile">
+                        <img src="../assets/shawntorres-pfp.jpg" alt="Profile Picture" class="profilePicture">
+                        <section>
+                            <p class="mainP username">Shawn Torres</p>
+                            <p class="subP">@cauliflowercarrotdog</p>   
+                        </section>
+                    </section>
+                    <button class="followButton">Follow</button>
+                </li>
+            </ul>
+            <p class="showMore"><a href="#" class="showMore">Show more</a></p>
         </section>
 
         <footer>

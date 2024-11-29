@@ -1,9 +1,9 @@
 .post {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid var(--darkGray);
+    border-bottom: 1px solid var(--gray);
     justify-content: flex-start;
-    border-bottom: 1px solid var(--darkGray);
+    border-bottom: 1px solid var(--gray);
 }
 
 .post-profile-pic {
@@ -11,7 +11,7 @@
     width: 50px;
     height: 50px;
     border-radius: 10rem;
-    margin: 1rem;
+    margin: 10px;
 }
 
 .postBody{
@@ -29,6 +29,7 @@
     gap: 10px;
     padding-top: 10px;
     margin: 0px;
+    margin-bottom: 5px;
 }
 
 
@@ -52,18 +53,8 @@
     justify-content: flex-start;
 }
 
-.post-text {
-    margin: 0px;
-    max-width: 70rem;
-    padding: 1rem;
-    padding-left: 0;
-    height: auto;
-    font-size: 1rem;
-    color: var(--white);
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    overflow-wrap: break-word;
+.postText{
+    margin: 0;
 }
 
 .postBottom{
@@ -73,11 +64,18 @@
     justify-content: flex-start;
     align-items: center;
 }
+.postOptionData{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 38.85vw;
+    margin: 0;
+    padding: 0;
+}
 
 .postOptions{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin: 0px;

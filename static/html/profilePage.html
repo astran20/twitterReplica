@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SweetieBot (@Sweetie) / X</title>
     <link rel="stylesheet" href="../css/profilePage.css">
-    <script src="../javascript/profilePage.js" defer></script>
+    <link rel="stylesheet" href="../css/post.css">
+    <script type="module" src="../javascript/profilePage.js" defer></script>
     <link rel="icon" href="../assets/XIcon.png">
 </head>
 <body>
@@ -356,7 +357,7 @@
     <section id="commentPopupBackground"></section>
     <section id="commentPopup">
         <section class="createCommentHeader">
-            <button class="closeCreateCommentButton" onclick="closePopup()">X</button>
+            <button class="closeCreateCommentButton">X</button>
             <p class="draftComment">Drafts</p>
         </section>
         <section class="originalPost">
@@ -375,7 +376,7 @@
         </section>
         <section class="createComment">
             <img src="../assets/catgirl-pfp.jpg" alt="profilePicture" class="profilePicture">
-            <textarea type="text" placeholder="Add another post" class="createCommentText" id="createCommentText" onchange="ready()"></textarea>
+            <textarea type="text" placeholder="Add another post" class="createCommentText" id="createCommentText"></textarea>
         </section>
         <section class="createCommentFooter">
             <section class="createCommentOptions">
@@ -386,7 +387,7 @@
                 <img src="../assets/scheduleIcon.png" alt="Schedule Post">
                 <img src="../assets/locationIcon.png" alt="Share Location">
             </section>
-            <button onclick="postComment()" id="postComment">Post</button>
+            <button id="postComment">Post</button>
         </section>
     
     </section>

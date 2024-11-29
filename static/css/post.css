@@ -1,0 +1,130 @@
+.post {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--darkGray);
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--darkGray);
+}
+
+.post-profile-pic {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 10rem;
+    margin: 1rem;
+}
+
+.postBody{
+    height: 100%;
+    width: 90%;
+}
+
+
+.postTop{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+
+.post-name-date{
+    display:flex;
+    flex-direction: row;
+    color: gray;
+    gap: 10px;
+}
+
+.postDate p{
+    font-size: 1.5rem;
+}
+
+.postMiddle{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.post-text {
+    margin: 0px;
+    max-width: 70rem;
+    padding: 1rem;
+    padding-left: 0;
+    height: auto;
+    font-size: 1rem;
+    color: var(--white);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
+.postBottom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.postOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.postButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 5px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+.postButton:hover{
+    background-color: var(--darkGray);
+}
+
+.textIcon{
+    width: 15px;
+    height: 15px;
+}
+
+.postIcon{
+    width: 18px;
+    height: 18px;
+}
+
+.commentButton:hover{
+    color: var(--blue);
+}
+
+.repostButton:hover{
+    color: var(--green);
+}
+
+.likeIcon:hover{
+    color: var(--pink);
+}
+
+.viewIcon:hover{
+    color: var(--blue);
+}
+

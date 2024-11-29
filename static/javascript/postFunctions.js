@@ -11,7 +11,7 @@ function addPost(text, location) {
         <div class="postBody">
             <div class="postTop">
                 <span class="post-name-date">SweetieBot</span>
-                <span class="post-name-date">${month} ${day}</span>
+                <span class="post-name-date postDate">${month} ${day}</span>
                 <span class="post-dot">• • •</span>
             </div>
             <div class="postMiddle">

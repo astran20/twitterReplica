@@ -27,7 +27,7 @@ inputField.addEventListener("keypress", event => {
 
 function savePosts() {
     const posts = [];
-    document.querySelectorAll('.post .postMiddle .post-text').forEach(post => {
+    document.querySelectorAll('.post .postMiddle .postText').forEach(post => {
         posts.push(post.textContent);
     });
     localStorage.setItem('posts', JSON.stringify(posts));

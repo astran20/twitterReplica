@@ -869,3 +869,12 @@ article > div{
     opacity: 0%;
     margin-bottom: 0px;
 }
+
+.AdditionalPostOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 75px;
+    width: fit-content;
+    padding: 0px;
+}

@@ -875,3 +875,7 @@ article > div{
     width: fit-content;
     padding: 0px;
 }
+
+.post{
+    border-bottom: 1px solid var(--gray);
+}

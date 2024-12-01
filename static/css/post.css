@@ -1,9 +1,7 @@
 .post {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid var(--gray);
     justify-content: flex-start;
-    border-bottom: 1px solid var(--gray);
 }
 
 .post-profile-pic {

@@ -284,7 +284,7 @@ function makeLine(){
     const originalPost = document.getElementsByTagName("article")
     const latestPost = originalPost[originalPost.length-1]
     const articleHeight = latestPost.offsetHeight
-    line.style.height = articleHeight - 70 + 'px'
+    line.style.height = articleHeight - 60 + 'px'
     console.log(articleHeight)
     const ogPostPfp = document.getElementsByClassName("originalPostPfp")
     const latestPostPfp = ogPostPfp[ogPostPfp.length-1]

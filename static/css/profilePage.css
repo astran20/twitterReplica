@@ -393,8 +393,7 @@ article section{
 }
 
 .dot{
-    margin-top: 0;
-    margin-bottom: 5px;
+    
     color: var(--gray);
     font-size: 15px;
 }
@@ -610,9 +609,7 @@ aside > div{
     margin-bottom: 0;
 }
 
-.topic .dot{
-    margin-top: 7px;
-}
+
 
 #newsFeed > p, #recommended > p{
     margin-top: 25px;

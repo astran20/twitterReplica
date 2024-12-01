@@ -26,7 +26,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     padding-top: 10px;
     margin: 0px;
     margin-bottom: 5px;
@@ -39,7 +39,9 @@
     color: gray;
     gap: 10px;
 }
-
+.postName{
+    color: white;
+}
 .post-dot{
     color: gray;
     margin-left: auto;

@@ -506,3 +506,6 @@ header button {
 }
 
 
+.post{
+    border-bottom: 1px solid var(--darkGray);
+}

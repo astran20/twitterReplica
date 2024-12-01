@@ -94,7 +94,7 @@ function postComment(){
                 userTag.className = "subP newCommentMetaData"
 
                 const dot = document.createElement("p")
-                dot.textContent = "."
+                dot.textContent = "•"
                 dot.className = "dot newCommentDot"
 
                 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
